@@ -16,5 +16,5 @@ export const BannerWithSliderData: BannerSliderType = {
         type: "primary"
     },
     logoIconName: "LogoRotate",
-    heroImage: "/img/slider/aa3.jpg",
+    heroImage: "/img/slider/aa3.JPG",
 }
