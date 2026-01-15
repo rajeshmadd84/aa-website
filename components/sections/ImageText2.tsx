@@ -13,6 +13,7 @@ const ImageText2 = ({ data }: { data: SectionProps }) => {
         container,
         imageList,
         subheading,
+        heading2,
         heading,
         text,
         textList,
@@ -65,13 +66,22 @@ const ImageText2 = ({ data }: { data: SectionProps }) => {
                                 />
                             }
 
-                            {heading && 
+                            {heading2 && 
                                 <Heading 
-                                    title={heading}
-                                    cls="text-50"
-                                    aos="fade-up"
-                                    aosDelay="50"
+                                    title={heading2}
+                                    cls="text-40"
                                 />
+                            }
+
+                            {heading && 
+                                <div className="mt-4">
+                                    <Heading 
+                                        title={heading}
+                                        cls="text-50"
+                                        aos="fade-up"
+                                        aosDelay="50"
+                                    />
+                                </div>
                             }
 
                             {text && 

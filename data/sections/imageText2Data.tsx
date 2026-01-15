@@ -6,8 +6,9 @@ import Image2 from '@/public/img/image-text/img-small.png';
 export const ImageText2Data: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
-    subheading: "Our Company",
-    heading: "Redesigning business for solutions",
+    subheading: "What I Do",
+    heading2: "Admissions isn't a process problem.",
+    heading: "It’s a decision problem and a story problem.",
     text: "Our mission is to empowers businesses off all size to thrive in an our businesses ever changing marketplace.",
     textList: [
         {

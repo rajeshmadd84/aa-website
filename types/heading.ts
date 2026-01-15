@@ -6,4 +6,5 @@ export interface HeadingType {
     aosAnchor?: string;
     aosDelay?: string;
     cls?: string;
+    style?: React.CSSProperties;
 }

@@ -10,6 +10,7 @@ export interface SectionProps {
     wrapperCls?: string;
     container?: string;
     subheading?: string;
+    heading2?: string;
     heading?: string;
     styledText?: string;
     styledTextCls?: string;

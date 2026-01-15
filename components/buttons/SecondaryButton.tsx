@@ -2,7 +2,7 @@ import Link from "next/link";
 import Icons from "../Icons";
 import { ThemeButtonType } from "@/types/themeButton";
 
-const SecondaryButton = ({ label, href, cls, ariaLabel, showIcon = true, type = 'submit' }: ThemeButtonType) => {
+const SecondaryButton = ({ label, href, cls, ariaLabel, showIcon = true, type = 'submit', style }: ThemeButtonType) => {
     return (
         <>
         {
@@ -11,6 +11,7 @@ const SecondaryButton = ({ label, href, cls, ariaLabel, showIcon = true, type = 
                     href={href}
                     className={`button button--secondary ${cls}`}
                     aria-label={ariaLabel}
+                    style={style}
                 >
                     {label}
                     {showIcon && <span className="svg-wrapper"><Icons.ArrowCircle /></span>}
@@ -20,6 +21,7 @@ const SecondaryButton = ({ label, href, cls, ariaLabel, showIcon = true, type = 
                     type={type}
                     className={`button button--secondary ${cls}`}
                     aria-label={ariaLabel}
+                    style={style}
                 >
                     {label}
                     {showIcon && <span className="svg-wrapper"><Icons.ArrowCircle /></span>}

@@ -9,9 +9,12 @@ export interface BannerSliderType {
     heading?: string;
     styledText?: string;
     text?: string;
+    subheading2?: string;
+    subheading3?: string;
     logoIconName?: keyof typeof Icons;
     button?: ButtonProps;
     phone?: string;
-    slides: SlideWithThumbType[];
+    slides?: SlideWithThumbType[];
+    heroImage?: string;
     navigation?: boolean;
 }

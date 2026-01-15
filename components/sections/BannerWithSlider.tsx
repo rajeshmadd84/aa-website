@@ -26,14 +26,18 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
         heading,
         styledText,
         text,
+        subheading2,
+        subheading3,
         button,
         phone,
         logoIconName,
         slides,
+        heroImage,
         navigation
     } = data || {};
     
     const LogoIcon = logoIconName ? Icons[logoIconName] : null;
+    const hasSlides = slides && slides.length > 0;
 
     // Swiper refs
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -45,6 +49,7 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
     // Attach navigation after both swiper and refs are ready
     useEffect(() => {
         if (
+            hasSlides &&
             swiperInstance &&
             prevRef.current &&
             nextRef.current &&
@@ -59,7 +64,7 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
             swiperInstance.navigation.init();
             swiperInstance.navigation.update();
         }
-    }, [swiperInstance]);
+    }, [swiperInstance, hasSlides]);
 
     return (
         <div className={`hero-banner ${wrapperCls}`}>
@@ -76,13 +81,6 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                 <div className="grid grid-cols-2 items-center lg:gap-1">
                     <div className="lg:col-span-1 col-span-2">
                         <div className="content section-headings">
-                            {subheading && 
-                                <Subheading 
-                                    title={subheading}
-                                    cls="text-20"
-                                />
-                            }
-
                             {heading &&
                                 <Heading 
                                     title={heading}
@@ -91,6 +89,7 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                     cls="text-80 fw-700"
                                     aos="fade-up"
                                     aosDelay="100"
+                                    style={{ color: '#1C2C4B' }}
                                 />
                             }
 
@@ -103,6 +102,24 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                 />
                             }
 
+                            {subheading2 && 
+                                <div className="mt-1" data-aos="fade-up" data-aos-delay="175">
+                                    <Subheading 
+                                        title={subheading2}
+                                        cls="text-20"
+                                    />
+                                </div>
+                            }
+
+                            {subheading3 && 
+                                <div className="mt-1" data-aos="fade-up" data-aos-delay="190">
+                                    <Subheading 
+                                        title={subheading3}
+                                        cls="text-20"
+                                    />
+                                </div>
+                            }
+
                             <div
                                 className="hero-button-wrap buttons"
                                 data-aos="fade-up"
@@ -113,6 +130,7 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                         label={button.label}
                                         href={button.href}
                                         ariaLabel={button.label}
+                                        style={{ backgroundColor: '#1C2C4B', borderColor: '#1C2C4B' }}
                                     />
                                 }
 
@@ -121,6 +139,7 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                         label={button.label}
                                         href={button.href}
                                         ariaLabel={button.label}
+                                        style={{ color: '#1C2C4B', borderColor: '#1C2C4B' }}
                                     />
                                 }
 
@@ -152,80 +171,96 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                 </div>
                             }
 
-                            <div className="main-slider" data-aos="fade-down">
-                                <Swiper
-                                    modules={[Thumbs, FreeMode, Navigation]}
-                                    slidesPerView={1}
-                                    thumbs={{ swiper: thumbsSwiper }}
-                                >
-                                    {slides.map((slide, index) => (
-                                        <SwiperSlide key={`slide-main-${index}`}>
-                                            {slide.image &&
-                                                <div className="main-img">
-                                                    <Image
-                                                        src={slide.image}
-                                                        width={992}
-                                                        height={717}
-                                                        loading="lazy"
-                                                        alt={`Slider image ${index}`}
-                                                    />
-                                                </div>
-                                            }
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </div>
+                            {hasSlides ? (
+                                <>
+                                    <div className="main-slider" data-aos="fade-down">
+                                        <Swiper
+                                            modules={[Thumbs, FreeMode, Navigation]}
+                                            slidesPerView={1}
+                                            thumbs={{ swiper: thumbsSwiper }}
+                                        >
+                                            {slides.map((slide, index) => (
+                                                <SwiperSlide key={`slide-main-${index}`}>
+                                                    {slide.image &&
+                                                        <div className="main-img">
+                                                            <Image
+                                                                src={slide.image}
+                                                                width={992}
+                                                                height={717}
+                                                                loading="lazy"
+                                                                alt={`Slider image ${index}`}
+                                                            />
+                                                        </div>
+                                                    }
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
+                                    </div>
 
-                            <div className="thumb-slider" data-aos="fade-up">
-                                <Swiper
-                                    onSwiper={setThumbsSwiper}
-                                    freeMode={true}
-                                    watchSlidesProgress={true}
-                                    onInit={setSwiperInstance}
-                                    modules={[FreeMode, Navigation]}                                    
-                                    breakpoints={{
-                                        0: {
-                                            spaceBetween: 10,
-                                            slidesPerView: 3,
-                                        },
-                                        575: {
-                                            spaceBetween: 16,
-                                            slidesPerView: 3,
-                                        },
-                                        768: {
-                                            spaceBetween: 20,
-                                            slidesPerView: 3,
-                                        },
-                                    }}
-                                >
-                                    {slides.map((slide, index) => (
-                                        <SwiperSlide key={`slide-thumb-${index}`}>
-                                            {slide.thumb &&
-                                                <div className="thumb-img">
-                                                    <Image
-                                                        src={slide.thumb}
-                                                        width={160}
-                                                        height={140}
-                                                        loading="lazy"
-                                                        alt={`Slider thumb image ${index}`}
-                                                    />
-                                                </div>
-                                            }
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
+                                    <div className="thumb-slider" data-aos="fade-up">
+                                        <Swiper
+                                            onSwiper={setThumbsSwiper}
+                                            freeMode={true}
+                                            watchSlidesProgress={true}
+                                            onInit={setSwiperInstance}
+                                            modules={[FreeMode, Navigation]}                                    
+                                            breakpoints={{
+                                                0: {
+                                                    spaceBetween: 10,
+                                                    slidesPerView: 3,
+                                                },
+                                                575: {
+                                                    spaceBetween: 16,
+                                                    slidesPerView: 3,
+                                                },
+                                                768: {
+                                                    spaceBetween: 20,
+                                                    slidesPerView: 3,
+                                                },
+                                            }}
+                                        >
+                                            {slides.map((slide, index) => (
+                                                <SwiperSlide key={`slide-thumb-${index}`}>
+                                                    {slide.thumb &&
+                                                        <div className="thumb-img">
+                                                            <Image
+                                                                src={slide.thumb}
+                                                                width={160}
+                                                                height={140}
+                                                                loading="lazy"
+                                                                alt={`Slider thumb image ${index}`}
+                                                            />
+                                                        </div>
+                                                    }
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
 
-                                {navigation && 
-                                    <>
-                                        <div className="swiper-button-prev" ref={prevRef}>
-                                            <Icons.ArrowLongLeft />
-                                        </div>
-                                        <div className="swiper-button-next" ref={nextRef}>
-                                            <Icons.ArrowLongRight />
-                                        </div>
-                                    </>
-                                }
-                            </div>
+                                        {navigation && 
+                                            <>
+                                                <div className="swiper-button-prev" ref={prevRef}>
+                                                    <Icons.ArrowLongLeft />
+                                                </div>
+                                                <div className="swiper-button-next" ref={nextRef}>
+                                                    <Icons.ArrowLongRight />
+                                                </div>
+                                            </>
+                                        }
+                                    </div>
+                                </>
+                            ) : (
+                                heroImage && (
+                                    <div className="main-img" data-aos="fade-down">
+                                        <Image
+                                            src={heroImage}
+                                            width={992}
+                                            height={717}
+                                            loading="lazy"
+                                            alt="Hero image"
+                                        />
+                                    </div>
+                                )
+                            )}
                         </banner-slider>
                     </div>
                 </div>

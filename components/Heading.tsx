@@ -8,6 +8,7 @@ const Heading = ({
     aosAnchor,
     aosDelay,
     cls,
+    style,
 }: HeadingType) => {
     const isAos = aos ? { 'data-aos': `${aos}` } : null;
     const isAosAnchor = aosAnchor ? { 'data-aos-anchor': `${aosAnchor}` } : null;
@@ -16,10 +17,12 @@ const Heading = ({
     
     // Split the title around the decorated text
     if(styledText) {
-        const parts = title.split(new RegExp(`(${styledText})`, "gi"));
+        // Escape special regex characters in styledText
+        const escapedStyledText = styledText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const parts = title.split(new RegExp(`(${escapedStyledText})`, "gi"));
 
         return (
-            <h2 className={`heading ${cls}`} {...conditionalAttributes}>
+            <h2 className={`heading ${cls}`} style={style} {...conditionalAttributes}>
                 {parts.map((part, index) =>
                     part.toLowerCase() === styledText.toLowerCase() ? (
                     <span key={index} className={styledTextCls}>
@@ -34,7 +37,7 @@ const Heading = ({
     }
 
     return (
-        <h2 className={`heading ${cls}`} {...conditionalAttributes}>
+        <h2 className={`heading ${cls}`} style={style} {...conditionalAttributes}>
             {title}
         </h2>
     )

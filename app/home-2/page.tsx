@@ -1,5 +1,7 @@
 import { BannerWithSliderData } from '@/data/sections/bannerWithSliderData';
-import { ImageText2Data } from '@/data/sections/imageText2Data';
+import { ImageTextData } from '@/data/sections/imageTextData';
+import { WhyChooseUsData } from '@/data/sections/whyChooseUsData';
+import { WorkingProcessData } from '@/data/sections/workingProcessData';
 import { OurServicesDataAccordion } from '@/data/sections/ourServicesDataAccordion';
 import { FeaturedProjectData } from '@/data/sections/featuredProjectData';
 import { WhyChooseUsGridData } from '@/data/sections/whyChooseUsGridData';
@@ -9,7 +11,9 @@ import { TestimonialSliderThumbData } from '@/data/sections/testimonialSliderThu
 import { FeaturedBlogData } from '@/data/sections/featuredBlogData';
 
 import BannerWithSlider from "@/components/sections/BannerWithSlider";
-import ImageText2 from '@/components/sections/ImageText2';
+import ImageText from '@/components/sections/ImageText';
+import WhyChooseUs from '@/components/sections/WhyChooseUs';
+import WorkingProcess from '@/components/sections/WorkingProcess';
 import OurServicesAccordion from '@/components/sections/OurServicesAccordion';
 import ProjectSlider from '@/components/sections/ProjectSlider';
 import WhyChooseUsGrid from '@/components/sections/WhyChooseUsGrid';
@@ -26,7 +30,13 @@ const Home2 = () => {
             <BannerWithSlider data={BannerWithSliderData} />
 
             {/* Image Text */}
-            <ImageText2 data={ImageText2Data} />
+            <ImageText data={ImageTextData} />
+
+            {/* Why Choose Us */}
+            <WhyChooseUs data={WhyChooseUsData} />
+
+            {/* Working Process */}
+            <WorkingProcess data={WorkingProcessData} />
 
             {/* Service Section */}
             <OurServicesAccordion data={OurServicesDataAccordion} />

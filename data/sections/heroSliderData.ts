@@ -29,8 +29,8 @@ export const HeroSlidesData = [
 
 export const BannerSlides = [
     {
-      thumb: "/img/slider/s1sm.jpg",
-      image: "/img/slider/s1.jpg",
+      thumb: "/img/slider/aneesha1.jpeg",
+      image: "/img/slider/aneesha1.jpeg",
     },
     {
       thumb: "/img/slider/s2sm.jpg",

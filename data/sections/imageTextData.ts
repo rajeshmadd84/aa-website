@@ -1,12 +1,13 @@
 import { SectionProps } from "@/types/sectionProps";
-import Image1 from '@/public/img/image-text/img1.png';
+import Image1 from '@/public/img/image-text/aneesha2.jpg';
 
 export const ImageTextData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
-    subheading: "Our Company",
-    heading: "Redesigning business for solutions",
-    text: "Our mission is to empowers businesses off all size to thrive in an our businesses ever changing marketplace.",
+    subheading: "What I Do",
+    heading2: "Admissions isn’t a process problem.",
+    heading: "It’s a decision problem and a story problem.",
+    text: "I help candidates to ",
     button: {
         label: "More About Us",
         href: "/contact-us",
@@ -21,13 +22,16 @@ export const ImageTextData: SectionProps = {
     },
     textList: [
         {
-            text: "Integrate a diverse range of ideas"
+            text: "Clarify why they are applying"
         },
         {
-            text: "Deliver the highest quality outcomes"
+            text: "Choose where to apply"
         },
         {
-            text: "Believe in powerof implication"
+            text: "Build what story to tell"
+        },
+        {
+            text: "Decide when to act"
         }
     ]
 }
