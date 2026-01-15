@@ -9,7 +9,7 @@ const Header = () => {
     const pathname = usePathname();
     let headerStyle = <HeaderStyle1 />
 
-    if(pathname == '/home-2') {
+    if(pathname == '/' || pathname == '/home-2') {
         headerStyle = <HeaderStyle2 />
     } else if(pathname == '/home-5') {
         headerStyle = <HeaderStyle3 />

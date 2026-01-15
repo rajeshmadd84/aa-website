@@ -1,5 +1,5 @@
 import { SectionProps } from "@/types/sectionProps";
-import Image1 from '@/public/img/image-text/aneesha2.jpg';
+import Image1 from '@/public/img/image-text/admissions.jpg';
 
 export const ImageTextData: SectionProps = {
     wrapperCls: "mt-100",

@@ -1,62 +1,65 @@
-import { HeroSlidesData } from '@/data/sections/heroSliderData';
+import { BannerWithSliderData } from '@/data/sections/bannerWithSliderData';
 import { ImageTextData } from '@/data/sections/imageTextData';
-import { ScrollingTextData } from '@/data/sections/scrollingTextData';
-import { OurServicesData } from '@/data/sections/ourServicesData';
-import { RecentProjectData } from '@/data/sections/recentProjectData';
 import { WhyChooseUsData } from '@/data/sections/whyChooseUsData';
-import { TeamSliderData } from '@/data/sections/teamSliderData';
-import { TestimonialData } from '@/data/sections/testimonialData';
-import { FeaturedBlogGridData } from '@/data/sections/featuredBlogGridData';
+import { WorkingProcessData } from '@/data/sections/workingProcessData';
+import { OurServicesDataAccordion } from '@/data/sections/ourServicesDataAccordion';
+import { FeaturedProjectData } from '@/data/sections/featuredProjectData';
+import { WhyChooseUsGridData } from '@/data/sections/whyChooseUsGridData';
+import { PricingPlanData } from '@/data/sections/pricingPlanData';
+import { FaqData } from '@/data/sections/faqData';
+import { TestimonialSliderThumbData } from '@/data/sections/testimonialSliderThumbData';
+import { FeaturedBlogData } from '@/data/sections/featuredBlogData';
 
-import HeroSlider from '@/components/sections/HeroSlider';
+import BannerWithSlider from "@/components/sections/BannerWithSlider";
 import ImageText from '@/components/sections/ImageText';
-import ScrollingText from '@/components/sections/ScrollingText';
-import OurServices from '@/components/sections/OurServices';
-import RecentProject from '@/components/sections/RecentProject';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
-import TeamSlider from '@/components/sections/TeamSlider';
-import Testimonials from '@/components/sections/Testimonials';
-import FeaturedBlogGrid from '@/components/sections/FeaturedBlogGrid';
+import WorkingProcess from '@/components/sections/WorkingProcess';
+import OurServicesAccordion from '@/components/sections/OurServicesAccordion';
+import ProjectSlider from '@/components/sections/ProjectSlider';
+import WhyChooseUsGrid from '@/components/sections/WhyChooseUsGrid';
+import PricingPlan from '@/components/sections/PricingPlan';
+import TestimonialSliderWithThumb from '@/components/sections/TestimonialSliderWithThumb';
+import Faq from '@/components/sections/Faq';
+import FeaturedBlog from '@/components/sections/FeaturedBlog';
 
 
 const Home = () => {
-  return (
-    <>
-      {/* Hero Slider */}
-      <HeroSlider 
-        wrapperCls="with-floating-header"
-        slides={HeroSlidesData} 
-        navigation={true} 
-      />
+    return(
+        <>
+            {/* Banner Slider */}
+            <BannerWithSlider data={BannerWithSliderData} />
 
-      {/* Image Text */}
-      <ImageText data={ImageTextData} />
+            {/* Image Text */}
+            <ImageText data={ImageTextData} />
 
-      {/* Scrolling Text */}
-      <ScrollingText data={ScrollingTextData} />
+            {/* Why Choose Us */}
+            <WhyChooseUs data={WhyChooseUsData} />
 
-      {/* Service Section */}
-      <OurServices data={OurServicesData} />
+            {/* Working Process */}
+            <WorkingProcess data={WorkingProcessData} />
 
-      {/* Recent Projects */}
-      <RecentProject data={RecentProjectData} />
+            {/* Service Section */}
+            <OurServicesAccordion data={OurServicesDataAccordion} />
 
-      {/* Why Choose Us */}
-      <WhyChooseUs data={WhyChooseUsData} />
+            {/* Recent Projects */}
+            <ProjectSlider data={FeaturedProjectData} />
 
-      {/* Our Team */}
-      <TeamSlider 
-        data={TeamSliderData} 
-        pagination={true}
-      />
+            {/* Why Choose Us */}
+            <WhyChooseUsGrid data={WhyChooseUsGridData} />
 
-      {/* Testimonials */}
-      <Testimonials data={TestimonialData} />
+            {/* Pricing Plan */}
+            <PricingPlan data={PricingPlanData} />
 
-      {/* Featured Blog */}
-      <FeaturedBlogGrid data={FeaturedBlogGridData} />
-    </>
-  );
+            {/* Testimonial Slider with Thumb */}
+            <TestimonialSliderWithThumb data={TestimonialSliderThumbData} />
+
+            {/* FAQ */}
+            <Faq data={FaqData} />
+
+            {/* Featured Blog */}
+            <FeaturedBlog data={FeaturedBlogData} />
+        </>
+    )
 }
 
 export default Home;
