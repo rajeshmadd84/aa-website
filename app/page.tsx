@@ -2,6 +2,7 @@ import { BannerWithSliderData } from '@/data/sections/bannerWithSliderData';
 import { ImageTextData } from '@/data/sections/imageTextData';
 import { WhyChooseUsData } from '@/data/sections/whyChooseUsData';
 import { WorkingProcessData } from '@/data/sections/workingProcessData';
+import { ServicesSliderHeadingsData } from "@/data/sections/servicesSliderHeadings";
 import { OurServicesDataAccordion } from '@/data/sections/ourServicesDataAccordion';
 import { FeaturedProjectData } from '@/data/sections/featuredProjectData';
 import { WhyChooseUsGridData } from '@/data/sections/whyChooseUsGridData';
@@ -14,6 +15,7 @@ import BannerWithSlider from "@/components/sections/BannerWithSlider";
 import ImageText from '@/components/sections/ImageText';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import WorkingProcess from '@/components/sections/WorkingProcess';
+import ServicesSlider from "@/components/sections/ServicesSlider";
 import OurServicesAccordion from '@/components/sections/OurServicesAccordion';
 import ProjectSlider from '@/components/sections/ProjectSlider';
 import WhyChooseUsGrid from '@/components/sections/WhyChooseUsGrid';
@@ -38,8 +40,14 @@ const Home = () => {
             {/* Working Process */}
             <WorkingProcess data={WorkingProcessData} />
 
+            {/* Service */}
+            <ServicesSlider 
+                data={ServicesSliderHeadingsData} 
+                pagination={true}
+            />
+
             {/* Service Section */}
-            <OurServicesAccordion data={OurServicesDataAccordion} />
+            {/* <OurServicesAccordion data={OurServicesDataAccordion} /> */}
 
             {/* Recent Projects */}
             <ProjectSlider data={FeaturedProjectData} />
