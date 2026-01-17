@@ -12,9 +12,9 @@ export const WhyChooseUsData: SectionProps = {
         loading: "lazy",
         alt: "Promotion image"
     },
-    subheading: "Why Choose Us",
-    heading: "Supporting Growth on a Global Scale",
-    text: "The solar solution company specializes in providing innovative, eco-friendly energy systems that harness the power, reducing carbon footprints and energy for clients worldwide.",
+    subheading: "Why Choose me",
+    heading: "Admissions is a directional choice, not a transaction.",
+    text: "We clarify the decision before the application begins, then execute with focus, coherence, and intent so every choice compounds long after admission.",
     button: {
         label: "Discover More",
         href: "/about-us",
@@ -22,14 +22,12 @@ export const WhyChooseUsData: SectionProps = {
     },
     promotions: [
         {
-            icon: <Icons.Winning />,
-            title: "99% Winning <br />Guarantee",
-            text: "The solar solution company specializes innovative.",
+            title: "Upstream Consulting",
+            text: "Decide direction before essays or rankings.",
         },
         {
-            icon: <Icons.Support />,
-            title: "Full Time <br />Support",
-            text: "The solar solution company specializes innovative.",
+            title: "Narrative Alignment",
+            text: "One coherent story across every decision.",
         },
     ],
     counterData: [

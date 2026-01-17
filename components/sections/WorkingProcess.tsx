@@ -16,6 +16,8 @@ const WorkingProcess = ({ data }: { data: SectionProps }) => {
         subheading,
         heading,
         text,
+        text2,
+        text3,
         promotions
     } = data || {};
 
@@ -41,14 +43,14 @@ const WorkingProcess = ({ data }: { data: SectionProps }) => {
                         }
                     </div>
 
-                    {text &&                     
-                        <div
-                            className="section-headings-right text text-18"
-                            data-aos="fade-left"
-                        >
-                            {text}
-                        </div>
-                    }
+                    <div
+                        className="section-headings-right text text-18"
+                        data-aos="fade-left"
+                    >
+                        {text && <div dangerouslySetInnerHTML={{ __html: text }} />}
+                        {text2 && <div className="mt-1" dangerouslySetInnerHTML={{ __html: text2 }} />}
+                        {text3 && <div className="mt-1" dangerouslySetInnerHTML={{ __html: text3 }} />}
+                    </div>
                 </div>
 
                 <div className="section-content">

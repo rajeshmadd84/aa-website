@@ -3,11 +3,13 @@ import WhyChooseUsImage from "@/public/img/promotion/1.jpg";
 import Icons from "@/components/Icons";
 
 export const WorkingProcessData: SectionProps = {
-    wrapperCls: "mt-100",
+    wrapperCls: "mt-100 mb-100",
     container: "container-fluid",
-    subheading: "Working Process",
-    heading: "How We Bring Your Ideas to Life",
-    text: "Empowering future & brands with leading-edge design solutions that inspire growth, spark innovation, and create lasting impact.",
+    subheading: "Full Package Admissions Advisory",
+    heading: "Turning Decisions into Outcomes",
+    text: "This is a <strong>high touch</strong>, <strong>end-to-end service</strong> for professionals making <strong>complex</strong>, <strong>high-stakes education decisions</strong>.",
+    text2: "<strong>Engagement Length:</strong> 8–12 weeks",
+    text3: "<strong>Format:</strong> 1:1, limited monthly capacity",
     button: {
         label: "Discover More",
         href: "/about-us",
@@ -16,33 +18,33 @@ export const WorkingProcessData: SectionProps = {
     promotions: [
         {
             icon: <Icons.Discover />,
-            title: "Listen & Discover",
-            text: "Starting by understanding your vision, goals, and brand story deeply.",
+            title: "Strategic Diagnostic",
+            text: "We analyze your career arc and inflection points to define the real decision this degree must solve.",
         },
         {
             icon: <Icons.Analyze />,
-            title: "Research & Analyze",
-            text: "Exploring market trends and audience insights to shape clear direction.",
+            title: "Decision Clarity",
+            text: "You get a clear apply or don’t apply stance, a tight shortlist, and a success definition.",
         },
         {
             icon: <Icons.Strategy />,
-            title: "Strategize & Plan ",
-            text: "Crafting a clear, tailored roadmap designed to achieve your objectives.",
+            title: "Narrative Spine",
+            text: "We build one coherent story linking your past, goals, and differentiation across materials.",
         },
         {
             icon: <Icons.Design />,
-            title: "Design & Create ",
-            text: "Turning concepts into innovative solutions that create lasting impact.",
+            title: "Essay Strategy & Feedback",
+            text: "Essays follow your core narrative, with precise feedback that sharpens clarity without distortion.",
         },
         {
             icon: <Icons.Refine />,
-            title: "Test & Refine ",
-            text: "We review, optimize, and perfect every detail for flawless results.",
+            title: "Interview Preparation",
+            text: "Mock interviews refine how you communicate fit, intent, and judgment to global panels.",
         },
         {
             icon: <Icons.Launch />,
-            title: "Launch & Support ",
-            text: "Delivering impactful results while ensuring your brand’s long-term success.",
+            title: "Guardrails for Execution ",
+            text: "We prevent over-editing and keep your application focused on fit, not validation.",
         },
     ],
 }

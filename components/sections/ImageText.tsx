@@ -14,7 +14,6 @@ const ImageText = ({ data }: { data: SectionProps }) => {
         container,
         image,
         subheading,
-        heading2,
         heading,
         text,
         textList,
@@ -49,16 +48,8 @@ const ImageText = ({ data }: { data: SectionProps }) => {
                                 />
                             }
 
-                            {heading2 && 
-                                <Heading 
-                                    title={heading2}
-                                    cls="text-28"
-                                    style={{ color: 'red' }}
-                                />
-                            }
-
                             {heading && 
-                                <div className="mt-1">
+                                <div>
                                     <Heading 
                                         title={heading}
                                         cls="text-50"

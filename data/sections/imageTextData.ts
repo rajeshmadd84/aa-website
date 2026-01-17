@@ -5,9 +5,8 @@ export const ImageTextData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
     subheading: "What I Do",
-    heading2: "Admissions isn’t a process problem.",
-    heading: "It’s a decision problem and a story problem.",
-    text: "I help candidates to ",
+    heading: "Not a Process. A Decision. A Story.",
+    text: "Admissions is not about compliance; it’s about conviction. Committees make irreversible choices under uncertainty. I help you clarify intent and craft a narrative that removes doubt and makes the decision feel inevitable.",
     button: {
         label: "More About Us",
         href: "/contact-us",
@@ -22,16 +21,19 @@ export const ImageTextData: SectionProps = {
     },
     textList: [
         {
-            text: "Clarify why they are applying"
+            text: "Define your career arc"
         },
         {
-            text: "Choose where to apply"
+            text: "Align past and future"
         },
         {
-            text: "Build what story to tell"
+            text: "Signal clarity and intent"
         },
         {
-            text: "Decide when to act"
+            text: "Reduce decision friction"
+        },
+        {
+            text: "Execute with precision"
         }
     ]
 }

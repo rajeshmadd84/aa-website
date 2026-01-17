@@ -15,6 +15,8 @@ export interface SectionProps {
     styledText?: string;
     styledTextCls?: string;
     text?: string;
+    text2?: string;
+    text3?: string;
     link?: string;
     button?: ButtonProps;
     primaryButton?: ButtonProps;
