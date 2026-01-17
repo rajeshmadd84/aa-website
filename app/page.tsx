@@ -2,25 +2,29 @@ import { BannerWithSliderData } from '@/data/sections/bannerWithSliderData';
 import { ImageTextData } from '@/data/sections/imageTextData';
 import { WhyChooseUsData } from '@/data/sections/whyChooseUsData';
 import { WorkingProcessData } from '@/data/sections/workingProcessData';
+import { TextBannerData } from "@/data/sections/textBannerData";
+import { StickyBannerData } from "@/data/sections/stickyBannerData";
 import { ServicesSliderHeadingsData } from "@/data/sections/servicesSliderHeadings";
 import { OurServicesDataAccordion } from '@/data/sections/ourServicesDataAccordion';
 import { FeaturedProjectData } from '@/data/sections/featuredProjectData';
 import { WhyChooseUsGridData } from '@/data/sections/whyChooseUsGridData';
 import { PricingPlanData } from '@/data/sections/pricingPlanData';
 import { FaqData } from '@/data/sections/faqData';
-import { TestimonialSliderThumbData } from '@/data/sections/testimonialSliderThumbData';
+import { TestimonialSliderData } from "@/data/sections/testimonialSliderData";
 import { FeaturedBlogData } from '@/data/sections/featuredBlogData';
 
 import BannerWithSlider from "@/components/sections/BannerWithSlider";
 import ImageText from '@/components/sections/ImageText';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import WorkingProcess from '@/components/sections/WorkingProcess';
+import TextBanner from "@/components/sections/TextBanner";
+import StickyBanner from "@/components/sections/StickyBanner";
 import ServicesSlider from "@/components/sections/ServicesSlider";
 import OurServicesAccordion from '@/components/sections/OurServicesAccordion';
 import ProjectSlider from '@/components/sections/ProjectSlider';
 import WhyChooseUsGrid from '@/components/sections/WhyChooseUsGrid';
 import PricingPlan from '@/components/sections/PricingPlan';
-import TestimonialSliderWithThumb from '@/components/sections/TestimonialSliderWithThumb';
+import TestimonialSlider from "@/components/sections/TestimonialSlider";
 import Faq from '@/components/sections/Faq';
 import FeaturedBlog from '@/components/sections/FeaturedBlog';
 
@@ -40,32 +44,41 @@ const Home = () => {
             {/* Working Process */}
             <WorkingProcess data={WorkingProcessData} />
 
+            {/* Text Banner */}
+            <TextBanner data={TextBannerData} />
+
+            {/* Sticky Banner */}
+            <StickyBanner data={StickyBannerData} />
+
             {/* Service */}
-            <ServicesSlider 
+            {/*  <ServicesSlider 
                 data={ServicesSliderHeadingsData} 
                 pagination={true}
-            />
+            />*/}
 
             {/* Service Section */}
             {/* <OurServicesAccordion data={OurServicesDataAccordion} /> */}
 
             {/* Recent Projects */}
-            <ProjectSlider data={FeaturedProjectData} />
+            {/*<ProjectSlider data={FeaturedProjectData} />*/}
 
             {/* Why Choose Us */}
-            <WhyChooseUsGrid data={WhyChooseUsGridData} />
+            {/*<WhyChooseUsGrid data={WhyChooseUsGridData} />*/}
 
             {/* Pricing Plan */}
             <PricingPlan data={PricingPlanData} />
 
-            {/* Testimonial Slider with Thumb */}
-            <TestimonialSliderWithThumb data={TestimonialSliderThumbData} />
+            {/* Testimonial Slider */}
+            <TestimonialSlider 
+                data={TestimonialSliderData}  
+                pagination={true}
+            />
 
             {/* FAQ */}
-            <Faq data={FaqData} />
+            {/*<Faq data={FaqData} />*/}
 
             {/* Featured Blog */}
-            <FeaturedBlog data={FeaturedBlogData} />
+            {/*<FeaturedBlog data={FeaturedBlogData} />*/}
         </>
     )
 }

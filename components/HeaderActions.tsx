@@ -1,7 +1,6 @@
 import SlimButton from "./buttons/SlimButton";
 import SearchModal from "./SearchModal";
 import HeaderSeparator from "./HeaderSeparator";
-import Hamburger from "./menus/Hamburger";
 
 const HeaderActions = () => {
     return (
@@ -14,7 +13,6 @@ const HeaderActions = () => {
                 ariaLabel="contact us"
                 cls="button--secondary !hidden lg:!inline-flex"
             />
-            <Hamburger />
         </div>
     )
 }

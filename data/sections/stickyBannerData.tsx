@@ -6,13 +6,13 @@ import Image3 from "@/public/img/project/3.jpg";
 export const StickyBannerData: SectionProps = {
     wrapperCls: "mt-100",
     container: "container",
-    heading: "Explore the Recent Works We Have Done!",
-    text: "The solar solution company specializes in providing innovative, eco-friendly energy systems harness the power, reducing carbon footprints and energy for clients worldwide.",
+    heading: "Results That Matter!",
+    text: "Admissions outcomes matter—but clarity, confidence, and direction matter more.",
     blockList: [
         {
-            subheading: "Investment Idea",
-            heading: "Innovation meets business needs",
-            text: "Our mission is to empowers businesses off all size to thrive in an our businesses ever changing marketplace.",    
+            subheading: "Admissions Outcomes",
+            heading: "Top Global Programs",
+            text: "Clients have earned admits to leading global MBA programs, executive education tracks, and specialized international master’s degrees.",    
             button: {
                 label: "Learn More",
                 href: "/projects",
@@ -27,14 +27,10 @@ export const StickyBannerData: SectionProps = {
             },
         },
         {
-            subheading: "Risk Management",
-            heading: "Protecting business from uncertainty",
-            text: "Our mission is to empowers businesses off all size to thrive in an our businesses ever changing marketplace.",    
-            button: {
-                label: "Learn More",
-                href: "/projects",
-                type: "primary"
-            },
+            subheading: "Decision Outcomes",
+            heading: "Confidence to Choose.",
+            text: "Beyond admits, clients gain clarity and conviction—knowing why they chose a program and what it enables next.",    
+            
             image: {
                 src: Image2.src,
                 width: 1000,
@@ -44,14 +40,10 @@ export const StickyBannerData: SectionProps = {
             },
         },
         {
-            subheading: "Business Growth",
-            heading: "Redesigning business for solutions",
-            text: "Our mission is to empowers businesses off all size to thrive in an our businesses ever changing marketplace.",    
-            button: {
-                label: "Learn More",
-                href: "/projects",
-                type: "primary"
-            },
+            subheading: "Long-Term Outcomes",
+            heading: "Direction That Compounds",
+            text: "Each decision aligns education with career and life direction, creating momentum that continues well beyond graduation.",
+           
             image: {
                 src: Image3.src,
                 width: 1000,
