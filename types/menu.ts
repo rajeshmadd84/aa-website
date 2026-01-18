@@ -1,7 +1,10 @@
 export interface MenuType {
     title: string;
     path: string;
-    dropdown?: boolean;
+    dropdown?: any;
+    megamenu?: any[];
+    megamenutwocolumn?: any[];
+    bottommenu?: any[];
     text?:string; 
     showbutton?: boolean; 
     altText?: string; 

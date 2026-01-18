@@ -1,6 +1,7 @@
 import Icons from "../components/Icons";
+import { MenuType } from "@/types/menu";
 
-const Menus = [
+const Menus: MenuType[] = [
     {
         title: 'Home',
         path: '/',
