@@ -26,8 +26,10 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
         heading,
         styledText,
         text,
-        subheading2,
-        subheading3,
+        heading2,
+        text2,
+        text3,
+        linkedinUrl,
         button,
         phone,
         logoIconName,
@@ -99,66 +101,99 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                     cls="text-18"
                                     aos="fade-up"
                                     aosDelay="150"
-                                />
-                            }
+                                    />
+                                }
 
-                            {subheading2 && 
-                                <div className="mt-1" data-aos="fade-up" data-aos-delay="175">
-                                    <Subheading 
-                                        title={subheading2}
-                                        cls="text-20"
+                            {heading2 && 
+                                <div className="mt-2">
+                                    <Heading 
+                                        title={heading2}
+                                        cls="text-28 fw-600"
+                                        aos="fade-up"
+                                        aosDelay="175"
+                                        style={{ color: '#1C2C4B' }}
                                     />
                                 </div>
                             }
 
-                            {subheading3 && 
-                                <div className="mt-1" data-aos="fade-up" data-aos-delay="190">
-                                    <Subheading 
-                                        title={subheading3}
-                                        cls="text-20"
+                            {text2 && 
+                                <div className="mt-1">
+                                    <Text 
+                                        text={text2}
+                                        cls="text-18"
+                                        aos="fade-up"
+                                        aosDelay="190"
                                     />
                                 </div>
                             }
 
-                            <div
-                                className="hero-button-wrap buttons"
-                                data-aos="fade-up"
-                                data-aos-delay="200"
-                            >
-                                {button && button.type == 'primary' &&
-                                    <PrimaryButton 
-                                        label={button.label}
-                                        href={button.href}
-                                        ariaLabel={button.label}
-                                        style={{ backgroundColor: '#1C2C4B', borderColor: '#1C2C4B' }}
+                            {text3 && 
+                                <div className="mt-1">
+                                    <Text 
+                                        text={text3}
+                                        cls="text-18"
+                                        aos="fade-up"
+                                        aosDelay="205"
                                     />
-                                }
+                                </div>
+                            }
 
-                                {button && button.type == 'secondary' &&
-                                    <SecondaryButton 
-                                        label={button.label}
-                                        href={button.href}
-                                        ariaLabel={button.label}
-                                        style={{ color: '#1C2C4B', borderColor: '#1C2C4B' }}
-                                    />
-                                }
-
-                                {phone && 
-                                    <Link
-                                        href={`tel:${phone}`}
-                                        className="hero-phone-call"
-                                        aria-label="Phone number"
+                            {linkedinUrl && 
+                                <div className="mt-2">
+                                    <Link 
+                                        href={linkedinUrl} 
+                                        target="_blank" 
+                                        className="linkedin-icon svg-wrapper"
                                         data-aos="fade-up"
-                                        data-aos-delay="50"
+                                        data-aos-delay="210"
+                                        style={{ display: 'inline-block', color: '#0077B5' }}
                                     >
-                                        <Icons.PhoneLarge />
-                                        <div className="hero-call">
-                                            <div className="text text-14">Need help?</div>
-                                            <div className="text text-16">{phone}</div>
-                                        </div>
+                                        <Icons.LinkedIn />
                                     </Link>
-                                }
-                            </div>
+                                </div>
+                            }
+
+                            {(button || phone) &&
+                                <div
+                                    className="hero-button-wrap buttons"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
+                                    {button && button.type == 'primary' &&
+                                        <PrimaryButton 
+                                            label={button.label}
+                                            href={button.href}
+                                            ariaLabel={button.label}
+                                            style={{ backgroundColor: '#1C2C4B', borderColor: '#1C2C4B' }}
+                                        />
+                                    }
+
+                                    {button && button.type == 'secondary' &&
+                                        <SecondaryButton 
+                                            label={button.label}
+                                            href={button.href}
+                                            ariaLabel={button.label}
+                                            style={{ color: '#1C2C4B', borderColor: '#1C2C4B' }}
+                                        />
+                                    }
+
+                                    {phone && 
+                                        <Link
+                                            href={`tel:${phone}`}
+                                            className="hero-phone-call"
+                                            aria-label="Phone number"
+                                            data-aos="fade-up"
+                                            data-aos-delay="50"
+                                        >
+                                            <Icons.PhoneLarge />
+                                            <div className="hero-call">
+                                                <div className="text text-14">Need help?</div>
+                                                <div className="text text-16">{phone}</div>
+                                            </div>
+                                        </Link>
+                                    }
+                                </div>
+                            }
                         </div>
                     </div>
                     <div className="lg:col-span-1 col-span-2">

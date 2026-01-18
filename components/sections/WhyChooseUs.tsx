@@ -8,6 +8,7 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import SecondaryButton from "../buttons/SecondaryButton";
 import PromotionList from "../PromotionList";
 import CounterUpVertical from "./CounterUpVertical";
+import Icons from "../Icons";
 
 
 const WhyChooseUs = ({ data }: { data: SectionProps }) => {
@@ -17,6 +18,8 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
         subheading,
         heading,
         text,
+        textList,
+        text2,
         button,
         image,
         promotions,
@@ -53,7 +56,36 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
                                         cls="text-18"
                                         aos="fade-right"
                                         aosDelay="200"
+                                        style={{ color: 'white' }}
                                     />
+                                }
+
+                                {textList &&
+                                    <ul className="text-lists list-unstyled">
+                                        {textList.map((item, index) => (
+                                            <li 
+                                                className="text-item text text-18" 
+                                                data-aos="fade-up" 
+                                                key={`text-item-${index}`}
+                                                style={{ color: 'white' }}
+                                            >
+                                                <Icons.Check />
+                                                {item.text}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                }
+
+                                {text2 &&
+                                    <div className="mt-2">
+                                        <Text 
+                                            text={text2}
+                                            cls="text-18"
+                                            aos="fade-right"
+                                            aosDelay="200"
+                                            style={{ color: 'white' }}
+                                        />
+                                    </div>
                                 }
                                 
                                 {promotions && <PromotionList items={promotions} />}

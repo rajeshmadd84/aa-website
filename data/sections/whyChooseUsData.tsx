@@ -1,5 +1,5 @@
 import { SectionProps } from "@/types/sectionProps";
-import WhyChooseUsImage from "@/public/img/promotion/1.jpg";
+import WhyChooseUsImage from "@/public/img/promotion/aa4.jpg";
 import Icons from "@/components/Icons";
 
 export const WhyChooseUsData: SectionProps = {
@@ -12,41 +12,22 @@ export const WhyChooseUsData: SectionProps = {
         loading: "lazy",
         alt: "Promotion image"
     },
-    subheading: "Why Choose me",
+    subheading: "Why Admissions Strategist",
     heading: "Admissions is a directional choice, not a transaction.",
-    text: "We clarify the decision before the application begins, then execute with focus, coherence, and intent so every choice compounds long after admission.",
-    button: {
-        label: "Discover More",
-        href: "/about-us",
-        type: "secondary"
-    },
-    promotions: [
+    text: "Most admissions consultants start at essays. I start before that.",
+    textList: [
         {
-            title: "Upstream Consulting",
-            text: "Decide direction before essays or rankings.",
+            text: "Decide if applying makes sense now"
         },
         {
-            title: "Narrative Alignment",
-            text: "One coherent story across every decision.",
-        },
-    ],
-    counterData: [
-        {
-            number: 20,
-            suffix: "k+",
-            title: "Project completed",
-            aos: "fade-up",
-            aosDelay: 20,
+            text: "Choose the right programs for your goals"
         },
         {
-            number: 12,
-            suffix: "k+",
-            title: "Happy customers",
+            text: "Build a single, consistent narrative across the application"
         },
         {
-            number: 25,
-            suffix: "+",
-            title: "Years experiences",
+            text: "Avoid regret-driven or prestige-chasing decisions"
         },
     ],
+    text2: "This work happens upstream and this is where the real leverage is!",
 }

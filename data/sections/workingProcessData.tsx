@@ -10,11 +10,6 @@ export const WorkingProcessData: SectionProps = {
     text: "This is a <strong>high touch</strong>, <strong>end-to-end service</strong> for professionals making <strong>complex</strong>, <strong>high-stakes education decisions</strong>.",
     text2: "<strong>Engagement Length:</strong> 8–12 weeks",
     text3: "<strong>Format:</strong> 1:1, limited monthly capacity",
-    button: {
-        label: "Discover More",
-        href: "/about-us",
-        type: "secondary"
-    },
     promotions: [
         {
             icon: <Icons.Discover />,
@@ -24,12 +19,12 @@ export const WorkingProcessData: SectionProps = {
         {
             icon: <Icons.Analyze />,
             title: "Decision Clarity",
-            text: "You get a clear apply or don’t apply stance, a tight shortlist, and a success definition.",
+            text: "Programs and Schools chosen for genuine fit, credibility, outcomes and long term strategic value.",
         },
         {
             icon: <Icons.Strategy />,
             title: "Narrative Spine",
-            text: "We build one coherent story linking your past, goals, and differentiation across materials.",
+            text: "We build one coherent story that bridges your experiences and aspirations.",
         },
         {
             icon: <Icons.Design />,

@@ -61,6 +61,19 @@
   gap: 30px;
 }
 
+.linkedin-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.linkedin-icon {
+  transition: opacity 0.3s;
+}
+
+.linkedin-icon:hover {
+  opacity: 0.8;
+}
+
 .hero-phone-call {
   display: flex;
   align-items: center;

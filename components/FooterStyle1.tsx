@@ -20,9 +20,9 @@ const FooterStyle1 = ({ container }: FooterProps) => {
                 height={1400}
                 alt="Contact image"
                 aosAnchor=".contact-box"
-                subheading="Contact Us"
-                heading="Get free business consultation today"
-                text="Need help with a project, have a question about our work? have a question about our work? We're here to help you."
+                subheading="Contact Me"
+                heading="Let's explore your path together"
+                text="Start with a conversation to access your current position and next steps."
             />
 
             <div

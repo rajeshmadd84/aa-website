@@ -66,7 +66,7 @@ const Home = () => {
             {/*<WhyChooseUsGrid data={WhyChooseUsGridData} />*/}
 
             {/* Pricing Plan */}
-            <PricingPlan data={PricingPlanData} />
+            {/* <PricingPlan data={PricingPlanData} />*/}
 
             {/* Testimonial Slider */}
             <TestimonialSlider 

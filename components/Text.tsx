@@ -6,6 +6,7 @@ const Text = ({
     aosAnchor,
     aosDelay,
     cls,
+    style,
 }: TextProps) => {
     const isAos = aos ? { 'data-aos': `${aos}` } : null;
     const isAosAnchor = aosAnchor ? { 'data-aos-anchor': `${aosAnchor}` } : null;
@@ -13,9 +14,12 @@ const Text = ({
     const conditionalAttributes = {...isAos, ...isAosAnchor, ...isAosDelay}
 
     return (
-        <p className={`text ${cls}`} {...conditionalAttributes}>
-            {text}
-        </p>
+        <p 
+            className={`text ${cls}`} 
+            style={style}
+            {...conditionalAttributes}
+            dangerouslySetInnerHTML={{ __html: text }}
+        />
     )
 }
 

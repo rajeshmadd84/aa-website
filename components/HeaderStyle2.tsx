@@ -18,12 +18,12 @@ const Header2 = () => {
             {/* Logo */}
             <Logo 
               src={LogoImage.src}
-              width={189}
-              height={32}
-              url="/"
-              cls="header-logo"
-              alt="Consulo logo"
-              ariaLabel="Consulo logo"
+             width={250}
+             height={45}
+             url="/"
+             cls="header-logo"
+             alt="Aneesha Advisory logo"
+             ariaLabel="Aneesha Advisory logo"
               loading="eager"
             />
 

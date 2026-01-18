@@ -9,8 +9,10 @@ export interface BannerSliderType {
     heading?: string;
     styledText?: string;
     text?: string;
-    subheading2?: string;
-    subheading3?: string;
+    heading2?: string;
+    text2?: string;
+    text3?: string;
+    linkedinUrl?: string;
     logoIconName?: keyof typeof Icons;
     button?: ButtonProps;
     phone?: string;

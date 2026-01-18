@@ -6,12 +6,7 @@ export const ImageTextData: SectionProps = {
     container: "container",
     subheading: "What I Do",
     heading: "Not a Process. A Decision. A Story.",
-    text: "Admissions is not about compliance; it’s about conviction. Committees make irreversible choices under uncertainty. I help you clarify intent and craft a narrative that removes doubt and makes the decision feel inevitable.",
-    button: {
-        label: "More About Us",
-        href: "/contact-us",
-        type: "primary"
-    },
+    text: "Admissions success isn’t just about essays or scores. It’s about having conviction, clarity in your decisions, alignment in your story, and discipline in execution.",
     image: {
         src: Image1.src,
         width: 992,
