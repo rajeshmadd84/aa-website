@@ -13,5 +13,5 @@ export const BannerWithSliderData: BannerSliderType = {
     text3: "Former Head of Admissions, ISB",
     linkedinUrl: "https://www.linkedin.com/in/aneeshachowdary/",
     logoIconName: "LogoRotate",
-    heroImage: "/img/slider/aa1.JPG",
+    heroImage: "/img/slider/aa1.jpg",
 }
