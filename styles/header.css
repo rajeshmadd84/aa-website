@@ -219,7 +219,11 @@ sticky-header[data-sticky-type="always"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 12px 15px;
+  }
+
+  .header-actions {
+    gap: 12px;
   }
 
   .header-2 .header-grid {
@@ -229,10 +233,37 @@ sticky-header[data-sticky-type="always"] {
 
 @media (max-width: 767px) {
   .header-logo {
-    max-width: 130px;
+    max-width: 150px;
+  }
+
+  .header-actions .button--slim {
+    padding-inline-start: 15px;
+    padding-inline-end: 8px;
   }
 
   .header-2 {
     --top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    max-width: 120px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-actions .button--slim {
+    padding-inline-start: 12px;
+    padding-inline-end: 6px;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .header-actions .button--slim .svg-wrapper {
+    min-width: 28px;
+    height: 28px;
   }
 }

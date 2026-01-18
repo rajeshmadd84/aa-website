@@ -3,9 +3,24 @@ import Image from "next/image";
 import Icons from "../Icons";
 import { MenuType } from "@/types/menu";
 
+const closeDrawer = () => {
+    const drawers = document.querySelectorAll('.drawer-menu, .drawer-additional, .theme-drawer');
+    const overlay = document.querySelector('#drawer-overlay');
+    
+    drawers.forEach(drawer => {
+        drawer.classList.remove('show');
+    });
+    
+    if (overlay) {
+        overlay.classList.remove('show');
+    }
+    
+    document.body.classList.remove('scroll-lock');
+};
+
 export const LinkHeading = ({ title, path }: MenuType) => {
     return(
-        <Link className="menu-link heading fw-300" href={path}>
+        <Link className="menu-link heading fw-300" href={path} onClick={closeDrawer}>
             {title}
         </Link>
     )
@@ -20,7 +35,7 @@ export const ParentLink = ({ title, path, dropdown }: MenuType) => {
                     <Icons.CaretDown />
                 </Link>
             ) : (
-                <Link className="menu-link menu-link-main" href={path}>
+                <Link className="menu-link menu-link-main" href={path} onClick={closeDrawer}>
                     {title}
                 </Link>
             )}
@@ -37,7 +52,7 @@ export const ChildLink = ({ title, path, dropdown }: MenuType) => {
                     <Icons.CaretDown />
                 </Link>
             ) : (
-                <Link className="menu-link" href={path}>
+                <Link className="menu-link" href={path} onClick={closeDrawer}>
                     {title}
                 </Link>
             )}
@@ -47,7 +62,7 @@ export const ChildLink = ({ title, path, dropdown }: MenuType) => {
 
 export const LinkWithImg = ({ title, path, text, showbutton, altText, imageUrl, imageUrlMobile }: MenuType) => {
     return (
-        <Link className="menu-link megamenu-image-wrap" href={path}>
+        <Link className="menu-link megamenu-image-wrap" href={path} onClick={closeDrawer}>
             <picture>
                 {imageUrlMobile && <source media="(max-width: 575px)" srcSet={imageUrlMobile} />}
                 <Image 
@@ -75,7 +90,7 @@ export const LinkWithImg = ({ title, path, text, showbutton, altText, imageUrl, 
 
 export const LinkWithDesc = ({ title, path, text }: MenuType) => {
     return(        
-        <Link className="menu-link" href={path}>
+        <Link className="menu-link" href={path} onClick={closeDrawer}>
             {title && <div className="heading text-20 fw-600">{title}</div>}
             {text && <div className="text text-14">{text}</div>}
         </Link>
@@ -84,7 +99,7 @@ export const LinkWithDesc = ({ title, path, text }: MenuType) => {
 
 export const BottomMenuLink = ({ title, path, icon }: MenuType) => {
     return(
-        <Link className="menu-link text-14 fw-300" href={path}>
+        <Link className="menu-link text-14 fw-300" href={path} onClick={closeDrawer}>
             {icon}
             {title}
         </Link>

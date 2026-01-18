@@ -6,6 +6,21 @@ import { MenuService, MenuContact } from "@/data/drawerMenus";
 import DrawerOpener from "./DrawerOpener";
 
 const AdditionalDrawer = () => {
+    const closeDrawer = () => {
+        const drawers = document.querySelectorAll('.drawer-menu, .drawer-additional, .theme-drawer');
+        const overlay = document.querySelector('#drawer-overlay');
+        
+        drawers.forEach(drawer => {
+            drawer.classList.remove('show');
+        });
+        
+        if (overlay) {
+            overlay.classList.remove('show');
+        }
+        
+        document.body.classList.remove('scroll-lock');
+    };
+
     return (
         <div className="theme-drawer drawer-additional" data-position="right">
             <div className="drawer-headings">
@@ -33,7 +48,7 @@ const AdditionalDrawer = () => {
                     <ul className="drawer-additional-menu list-unstyled flex-col">
                         {MenuService.menus.map((item, index) => (
                             <li className="nav-item" key={`MenuService-${index}`}>
-                                <Link className="menu-link" href={item.path}>
+                                <Link className="menu-link" href={item.path} onClick={closeDrawer}>
                                     {item.title}
                                 </Link>
                             </li>
@@ -52,7 +67,7 @@ const AdditionalDrawer = () => {
                                         {item.title}
                                     </div>
                                 ) : (
-                                    <Link className="menu-link" href={item.path}>
+                                    <Link className="menu-link" href={item.path} onClick={closeDrawer}>
                                         {item.icon}
                                         {item.title}
                                     </Link>
