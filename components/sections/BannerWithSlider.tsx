@@ -105,7 +105,7 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                                 }
 
                             {heading2 && 
-                                <div className="mt-2">
+                                <div className="mt-1">
                                     <Heading 
                                         title={heading2}
                                         cls="text-28 fw-600"
@@ -117,10 +117,10 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                             }
 
                             {text2 && 
-                                <div className="mt-1">
+                                <div className="mt-0">
                                     <Text 
                                         text={text2}
-                                        cls="text-18"
+                                        cls="text-16"
                                         aos="fade-up"
                                         aosDelay="190"
                                     />
@@ -128,10 +128,10 @@ const BannerWithSlider = ({ data }: { data: BannerSliderType }) => {
                             }
 
                             {text3 && 
-                                <div className="mt-1">
+                                <div className="mt-0">
                                     <Text 
                                         text={text3}
-                                        cls="text-18"
+                                        cls="text-16"
                                         aos="fade-up"
                                         aosDelay="205"
                                     />

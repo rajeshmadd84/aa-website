@@ -1,7 +1,7 @@
 import Icons from "./Icons";
 import Link from "next/link";
 import Logo from "./Logo";
-import LogoImage from "@/public/img/logo.png";
+import LogoImage from "@/public/img/logo-aa.png";
 import { MenuService, MenuContact } from "@/data/drawerMenus";
 import DrawerOpener from "./DrawerOpener";
 

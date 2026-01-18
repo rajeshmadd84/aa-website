@@ -98,7 +98,7 @@ sticky-header[data-sticky-type="always"] {
 }
 
 .header-logo {
-  max-width: 188px;
+  max-width: 250px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -172,11 +172,6 @@ sticky-header[data-sticky-type="always"] {
 
   .header-actions {
     gap: 20px;
-  }
-
-  .header-3 .header-actions > .button,
-  .header-2 .header-actions > .button {
-    display: none;
   }
 
   .header-separator {

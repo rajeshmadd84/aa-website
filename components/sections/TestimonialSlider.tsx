@@ -35,7 +35,7 @@ const TestimonialSlider = ({
     } = data || {};
 
     return (
-        <testi-slider className={wrapperCls}>
+        <testi-slider id="testimonials" className={wrapperCls}>
             <div className={container}>
                 <div className="section-headings headings-width text-center">
                     {subheading &&

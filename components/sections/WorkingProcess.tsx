@@ -22,7 +22,7 @@ const WorkingProcess = ({ data }: { data: SectionProps }) => {
     } = data || {};
 
     return (
-        <div className={`working-process recent-project ${wrapperCls}`}>
+        <div id="package" className={`working-process recent-project ${wrapperCls}`}>
             <div className={container}>
                 <div className="section-headings section-headings-horizontal">
                     <div className="section-headings-left">
@@ -44,7 +44,7 @@ const WorkingProcess = ({ data }: { data: SectionProps }) => {
                     </div>
 
                     <div
-                        className="section-headings-right text text-18"
+                        className="section-headings-right text text-16"
                         data-aos="fade-left"
                     >
                         {text && <div dangerouslySetInnerHTML={{ __html: text }} />}

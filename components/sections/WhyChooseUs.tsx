@@ -27,7 +27,7 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
     } = data || {};
 
     return (
-        <div className={`promotion ${wrapperCls}`}>
+        <div id="why-me" className={`promotion ${wrapperCls}`}>
             <div className={container}>
                 <div className="promotion-container">
                     <div className="grid grid-cols-12 lg:gap-1">
@@ -80,7 +80,7 @@ const WhyChooseUs = ({ data }: { data: SectionProps }) => {
                                     <div className="mt-2">
                                         <Text 
                                             text={text2}
-                                            cls="text-18"
+                                            cls="text-16"
                                             aos="fade-right"
                                             aosDelay="200"
                                             style={{ color: 'white' }}

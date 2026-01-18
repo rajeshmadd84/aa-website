@@ -72,7 +72,7 @@ const ContactSection = ({ data }: { data: SectionProps }) => {
     };
 
     return (
-        <div className={`section-contact-form ${wrapperCls}`}>
+        <div id="contact" className={`section-contact-form ${wrapperCls}`}>
             <div className={container}>
                 <div className="contact-box radius18">
                     <div className="grid max-xxl:grid-cols-2 xxl:flex product-grid justify-between xxl:gap-[30px]">

@@ -1,5 +1,5 @@
 import Logo from "../Logo";
-import LogoImage from "@/public/img/logo.png";
+import LogoImage from "@/public/img/logo-aa.png";
 import "@/styles/navigation.css";
 import Menus from "../../data/mainMenuList";
 import Icons from "../Icons";

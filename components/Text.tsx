@@ -18,7 +18,7 @@ const Text = ({
             className={`text ${cls}`} 
             style={style}
             {...conditionalAttributes}
-            dangerouslySetInnerHTML={{ __html: text }}
+            dangerouslySetInnerHTML={{ __html: text || "" }}
         />
     )
 }

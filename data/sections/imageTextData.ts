@@ -1,8 +1,12 @@
 import { SectionProps } from "@/types/sectionProps";
 import Image1 from '@/public/img/image-text/admissions.jpg';
+import BgImage from "@/public/img/slider/slider-bg.jpg";
 
 export const ImageTextData: SectionProps = {
-    wrapperCls: "mt-100",
+    wrapperCls: "mt-100 section-padding",
+    backgroundImage: {
+        src: BgImage.src,
+    },
     container: "container",
     subheading: "What I Do",
     heading: "Not a Process. A Decision. A Story.",

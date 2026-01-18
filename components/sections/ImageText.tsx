@@ -12,6 +12,7 @@ const ImageText = ({ data }: { data: SectionProps }) => {
     const {
         wrapperCls,
         container,
+        backgroundImage,
         image,
         subheading,
         heading,
@@ -21,7 +22,18 @@ const ImageText = ({ data }: { data: SectionProps }) => {
     } = data || {};
 
     return (
-        <div className={`image-text ${wrapperCls}`}>
+        <div id="what-i-do" className={`image-text ${wrapperCls}`}>
+            {backgroundImage && (
+                <div className="media media-bg">
+                    <Image
+                        src={backgroundImage.src}
+                        alt="background"
+                        width={1920}
+                        height={1000}
+                        loading="lazy"
+                    />
+                </div>
+            )}
             <div className={container ? container : 'container'}>
                 <div className="grid lg:grid-cols-2 lg:gap-1 items-center">
                     <div className="lg:col-span-1 col-span-2">

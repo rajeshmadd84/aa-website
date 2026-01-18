@@ -73,6 +73,7 @@ const FooterContact = ({
 
     return (
         <div 
+            id="footer-contact"
             className="footer-contact bg-contain"
             style={ bgImage ? { backgroundImage: `url(${bgImage})` } : undefined }
         >

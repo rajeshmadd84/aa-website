@@ -9,7 +9,7 @@ export const BannerWithSliderData: BannerSliderType = {
     styledText: "Admissions",
     text: "I help professionals make the <i>right</i> admissions choices and deliver clear, coherent, and compelling applications that reflect their true potential.",
     heading2: "Aneesha Chowdary",
-    text2: "Founder | ISB PGP Class of 2017",
+    text2: "<strong>Founder</strong> | ISB PGP Class of 2017",
     text3: "Former Head of Admissions, ISB",
     linkedinUrl: "https://www.linkedin.com/in/aneeshachowdary/",
     logoIconName: "LogoRotate",
